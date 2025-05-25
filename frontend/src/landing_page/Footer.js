@@ -6,53 +6,64 @@ function Footer() {
       <div className="container border-top mt-5">
         <div className="row mt-5">
           <div className="col">
-            <img src="media/images/logo.svg" style={{ width: "50%" }} />
+            <img
+              src="https://zerodha.com/static/images/logo.svg"
+              style={{ width: "50%" }}
+              alt="Zerodha Logo"
+            />
             <p>
               &copy; 2010 - 2024, Not Zerodha Broking Ltd. All rights reserved.
             </p>
           </div>
           <div className="col">
             <p>Company</p>
-            <a href="">About</a>
+            <a href="https://zerodha.com/about">About</a>
             <br />
-            <a href="">Products</a>
+            <a href="https://zerodha.com/products">Products</a>
             <br />
-            <a href="">Pricing</a>
+            <a href="https://zerodha.com/pricing">Pricing</a>
             <br />
-            <a href="">Referral programme</a>
+            <a href="https://zerodha.com/referral">Referral programme</a>
             <br />
-            <a href="">Careers</a>
+            <a href="https://zerodha.com/careers">Careers</a>
             <br />
-            <a href="">Zerodha.tech</a>
+            <a href="https://zerodha.tech">Zerodha.tech</a>
             <br />
-            <a href="">Press & media</a>
+            <a href="https://zerodha.com/media">Press & media</a>
             <br />
-            <a href="">Zerodha cares (CSR)</a>
+            <a href="https://zerodha.com/z-connect/category/zerodha-cares/">
+              Zerodha cares (CSR)
+            </a>
             <br />
           </div>
           <div className="col">
             <p>Support</p>
-            <a href="">Contact</a>
+            <a href="https://zerodha.com/contact">Contact</a>
             <br />
-            <a href="">Support portal</a>
+            <a href="https://support.zerodha.com">Support portal</a>
             <br />
-            <a href="">Z-Connect blog</a>
+            <a href="https://zerodha.com/z-connect">Z-Connect blog</a>
             <br />
-            <a href="">List of charges</a>
+            <a href="https://support.zerodha.com/category/charges">
+              List of charges
+            </a>
             <br />
-            <a href="">Downloads & resources</a>
+            <a href="https://zerodha.com/resources">Downloads & resources</a>
             <br />
           </div>
           <div className="col">
             <p>Account</p>
-            <a href="">Open an account</a>
+            <a href="https://zerodha.com/open-account">Open an account</a>
             <br />
-            <a href="">Fund transfer</a>
+            <a href="https://support.zerodha.com/category/funds">
+              Fund transfer
+            </a>
             <br />
-            <a href="">60 day challenge</a>
+            <a href="https://zerodha.com/60-day-challenge">60 day challenge</a>
             <br />
           </div>
         </div>
+
         <div className="mt-5 text-muted" style={{ fontSize: "14px" }}>
           <p>
             Zerodha Broking Ltd.: Member of NSE​ &​ BSE – SEBI Registration no.:
@@ -63,16 +74,23 @@ function Footer() {
             #153/154, 4th Cross, Dollars Colony, Opp. Clarence Public School,
             J.P Nagar 4th Phase, Bengaluru - 560078, Karnataka, India. For any
             complaints pertaining to securities broking please write to
-            complaints@zerodha.com, for DP related to dp@zerodha.com. Please
-            ensure you carefully read the Risk Disclosure Document as prescribed
-            by SEBI | ICF
+            <a href="mailto:complaints@zerodha.com"> complaints@zerodha.com</a>,
+            for DP related to <a href="mailto:dp@zerodha.com">dp@zerodha.com</a>
+            . Please ensure you carefully read the Risk Disclosure Document as
+            prescribed by SEBI | ICF
           </p>
 
           <p>
-            Procedure to file a complaint on SEBI SCORES: Register on SCORES
-            portal. Mandatory details for filing complaints on SCORES: Name,
-            PAN, Address, Mobile Number, E-mail ID. Benefits: Effective
-            Communication, Speedy redressal of the grievances
+            Procedure to file a complaint on SEBI SCORES: Register on{" "}
+            <a
+              href="https://scores.gov.in"
+              target="_blank"
+              rel="noopener noreferrer">
+              SCORES portal
+            </a>
+            . Mandatory details for filing complaints on SCORES: Name, PAN,
+            Address, Mobile Number, E-mail ID. Benefits: Effective
+            Communication, Speedy redressal of the grievances.
           </p>
 
           <p>
@@ -95,8 +113,8 @@ function Footer() {
             of allotment. In case of non allotment the funds will remain in your
             bank account. As a business we don't give stock tips, and have not
             authorized anyone to trade on behalf of others. If you find anyone
-            claiming to be part of Zerodha and offering such services, please
-            create a ticket here.
+            claiming to be part of Zerodha and offering such services, please{" "}
+            <a href="https://support.zerodha.com">create a ticket here</a>.
           </p>
         </div>
       </div>

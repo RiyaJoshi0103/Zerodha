@@ -14,6 +14,7 @@ function Team() {
           <img
             src="media/images/nithinKamath.jpg"
             style={{ borderRadius: "100%", width: "50%" }}
+            alt="Nithin Kamath"
           />
           <h4 className="mt-5">Nithin Kamath</h4>
           <h6>Founder, CEO</h6>
@@ -30,8 +31,9 @@ function Team() {
           </p>
           <p>Playing basketball is his zen.</p>
           <p>
-            Connect on <a href="">Homepage</a> / <a href="">TradingQnA</a> /{" "}
-            <a href="">Twitter</a>
+            Connect on <a href="https://zerodha.com">Homepage</a> /{" "}
+            <a href="https://tradingqna.com">TradingQnA</a> /{" "}
+            <a href="https://twitter.com/Nithin0Kamath">Twitter</a>
           </p>
         </div>
       </div>
