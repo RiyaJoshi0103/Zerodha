@@ -15,7 +15,7 @@ function Login() {
 
     if (user) {
       alert("Login successful!");
-      window.location.href = "http://localhost:3000/"; // redirect to dashboard
+      window.location.href = "https://zerodha-dashboard1-16u1.onrender.com/"; // redirect to dashboard
     } else {
       alert("Invalid credentials");
     }
