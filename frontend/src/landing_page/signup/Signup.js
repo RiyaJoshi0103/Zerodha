@@ -5,23 +5,46 @@ function Signup() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  const handleSignup = (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
     if (password !== confirmPassword) {
       alert("Passwords do not match");
       return;
     }
-    let users = JSON.parse(localStorage.getItem("users")) || [];
-    if (users.find((u) => u.email === email)) {
-      alert("User already exists");
-      return;
+
+    try {
+      const response = await fetch("http://localhost:3002/signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+      const data = await response.json();
+      if (response.ok) {
+        if (data.token) {
+          localStorage.setItem("token", data.token);
+        }
+        alert("Signup successful, please login!");
+        setEmail("");
+        setPassword("");
+        setConfirmPassword("");
+        return;
+      } else {
+        alert(data.error || "Signup failed");
+        return;
+      }
+    } catch (err) {
+      let users = JSON.parse(localStorage.getItem("users")) || [];
+      if (users.find((u) => u.email === email)) {
+        alert("User already exists");
+        return;
+      }
+      users.push({ email, password });
+      localStorage.setItem("users", JSON.stringify(users));
+      alert("Signup successful, please login!");
+      setEmail("");
+      setPassword("");
+      setConfirmPassword("");
     }
-    users.push({ email, password });
-    localStorage.setItem("users", JSON.stringify(users));
-    alert("Signup successful, please login!");
-    setEmail("");
-    setPassword("");
-    setConfirmPassword("");
   };
 
   return (
