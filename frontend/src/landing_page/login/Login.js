@@ -4,20 +4,37 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
 
-    const users = JSON.parse(localStorage.getItem("users")) || [];
+    try {
+      const response = await fetch("http://localhost:3002/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+      const data = await response.json();
+      if (response.ok && data.token) {
+        localStorage.setItem("token", data.token);
+        alert("Login successful!");
+        window.location.href = "https://zerodha-dashboard1-16u1.onrender.com/";
+        return;
+      } else {
+        alert(data.error || "Invalid credentials");
+        return;
+      }
+    } catch (err) {
+      const users = JSON.parse(localStorage.getItem("users")) || [];
+      const user = users.find(
+        (user) => user.email === email && user.password === password
+      );
 
-    const user = users.find(
-      (user) => user.email === email && user.password === password
-    );
-
-    if (user) {
-      alert("Login successful!");
-      window.location.href = "https://zerodha-dashboard1-16u1.onrender.com/"; // redirect to dashboard
-    } else {
-      alert("Invalid credentials");
+      if (user) {
+        alert("Login successful!");
+        window.location.href = "https://zerodha-dashboard1-16u1.onrender.com/";
+      } else {
+        alert("Invalid credentials");
+      }
     }
   };
 
